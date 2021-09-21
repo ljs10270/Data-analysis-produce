@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>농산물 가격 예측 프로젝트</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="{{url_for('static', filename='css/mdb.min.css')}}" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="{{url_for('static', filename='css/style.min.css')}}" rel="stylesheet">
+    <!-- 나눔 바른 고딕 웹 폰트 적용 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
+    <style type="text/css">
+
+        html,
+        body,
+        header,
+        .carousel {
+            height: 100%;
+        }
+
+        @media (min-width: 800px) and (max-width: 850px) {
+            .navbar:not(.top-nav-collapse) {
+                background: #1C2331 !important;
+            }
+        }
+
+        .hangul {
+            font-family: 'Nanum Barun Gothic' !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+
+            <!-- Brand -->
+            <a class="navbar-brand" href="#" target="_blank">
+                <strong class="hangul">농산물 가격 예측 프로젝트</strong>
+            </a>
+
+            <!-- Collapse -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!-- Left -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right -->
+                <ul class="navbar-nav nav-flex-icons">
+                    <li class="nav-item">
+                        <a href="https://blog.naver.com/ljs1027s" class="nav-link border border-light rounded"
+                           target="_blank">
+                           개발자 블로그
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <!--Carousel Wrapper-->
+    <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+        </ol>
+
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!--First slide-->
+            <div class="carousel-item active">
+                <div class="view">
+
+                    <!--Video source-->
+                    <video class="video-intro" autoplay loop>
+                        <source src="https://mdbootstrap.com/img/video/city.mp4" type="video/mp4">
+                    </video>
+
+                    <!-- Mask & flexbox options-->
+                    <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                        <!-- Content -->
+                        <div class="text-center white-text mx-5 wow fadeIn">
+                            <h1 class="mb-4">
+                                <strong style="font-family: 'Nanum Barun Gothic'">농산물 가격 예측</strong>
+                            </h1>
+
+                            <p>
+                                <strong style="font-family: 'Nanum Barun Gothic'">농산물(배추) 가격을 예측해 보세요.</strong>
+                            </p>
+
+                            <p class="mb-4 d-none d-md-block">
+                                <strong>2900개 이상의 데이터를 기반으로 머신 러닝 선형 회귀(Linear Regression) 모델을 확장하여 시계열에 따른 배추 가격을 예측하고 학습 결과를 확인할 수 있습니다.</strong>
+                            </p>
+
+                            <a target="_blank" href="https://blog.naver.com/ljs1027s" class="btn btn-outline-white btn-lg">
+                                개발자 블로그
+                                <i class="fa fa-graduation-cap ml-2"></i>
+                            </a>
+                        </div>
+                        <!-- Content -->
+
+                    </div>
+                    <!-- Mask & flexbox options-->
+
+                </div>
+            </div>
+            <!--/First slide-->
+            
+
+        </div>
+        
+    </div>
+    <!--/.Carousel Wrapper-->
+
+    <!--Main layout-->
+    <main>
+        <div class="container">
+
+            <!--Section: Main info-->
+            <section class="mt-5 wow fadeIn">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-md-6 mb-4">
+                        <p>기상청 - 기상 자료 확인하기</p>
+                        <a target="_blank" href="https://data.kma.go.kr/cmmn/main.do"
+                           style="font-family: 'Nanum Barun Gothic'" class="btn btn-grey btn-md">
+                            기상 자료 개방 포털
+                        </a>
+
+                        <hr />
+
+                        <p>KAMIS 농산물 유통 정보 확인하기</p>
+                        <a target="_blank" href="https://www.kamis.or.kr/customer/price/retail/period.do"
+                           style="font-family: 'Nanum Barun Gothic'" class="btn btn-grey btn-md">
+                            농산물 유통 정보
+                        </a>
+
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+            </section>
+            <!--Section: Main info-->
+
+            <hr class="my-5">
+
+            <!--Section: Main features & Quick Start-->
+            <section>
+
+                <h3 class="h3 text-center mb-5" style="font-family: 'Nanum Barun Gothic'">미래 데이터 예측해보기</h3>
+
+                <!--Grid row-->
+                <div class="row wow fadeIn">
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12 px-4">
+
+                        <form action="/" method="post">
+                            <!-- Default form group -->
+                            <!-- Default input -->
+                            <div class="form-group">
+                                <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">평균 온도</label>
+                                <input style="font-family: 'Nanum Barun Gothic'" type="text" name="avg_temp" class="form-control" id="formGroupExampleInput" placeholder="평균 온도를 입력하세요.">
+                            </div>
+                            <!-- Default input -->
+                            <div class="form-group">
+                                <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최소 온도</label>
+                                <input style="font-family: 'Nanum Barun Gothic'" type="text" name="min_temp" class="form-control" id="formGroupExampleInput" placeholder="최소 온도를 입력하세요.">
+                            </div>
+                            <!-- Default input -->
+                            <div class="form-group">
+                                <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">최대 온도</label>
+                                <input style="font-family: 'Nanum Barun Gothic'" type="text" name="max_temp" class="form-control" id="formGroupExampleInput" placeholder="최대 온도를 입력하세요.">
+                            </div>
+                            <!-- Default input -->
+                            <div class="form-group">
+                                <label style="font-family: 'Nanum Barun Gothic'" for="formGroupExampleInput">강수량</label>
+                                <input style="font-family: 'Nanum Barun Gothic'" type="text" name="rain_fall" class="form-control" id="formGroupExampleInput" placeholder="강수량을 입력하세요.">
+                            </div>
+                            <!-- Default form group -->
+                            <button style="font-family: 'Nanum Barun Gothic' !important;" type="submit" class="btn btn-primary btn-md pull-right">예측하기</button>
+
+                        </form>
+
+                    </div>
+                    <!--/Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-12">
+
+                        <p class="h5 text-center mb-4" style="font-family: 'Nanum Barun Gothic'">예측 결과</p>
+                        {% if price %}
+                        <h5 class="text-center mt-3">예측된 가격은 {{ price }}원입니다.</h5>
+                        {% endif %}
+                    </div>
+                    <!--/Grid column-->
+
+                </div>
+                <!--/Grid row-->
+
+            </section>
+            <!--Section: Main features & Quick Start-->
+
+        </div>
+    </main>
+    <!--Main layout-->
+    <!--Footer-->
+    <footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+        <hr class="my-4">
+
+        <!--Copyright-->
+        <div class="footer-copyright py-3">
+            © 2020 Copyright:
+            <a href="https://blog.naver.com/ljs1027s" target="_blank"> 이재선 </a>
+        </div>
+        <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{url_for('static', filename='js/mdb.min.js')}}"></script>
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+</body>
+
+</html>
